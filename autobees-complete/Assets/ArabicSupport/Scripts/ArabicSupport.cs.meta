@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3be8d3a121eda4528aa029c9467af8ae
+timeCreated: 1482729253
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 2674
+  packageName: Arabic Support for Unity
+  packageVersion: 4.0
+  assetPath: Assets/ArabicSupport/Scripts/ArabicSupport.cs
+  uploadId: 610258
