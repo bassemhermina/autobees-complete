@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://cqypejnly3mbi"]
+
+[ext_resource type="Texture2D" uid="uid://bfathcn2pvack" path="res://SVGs/MenuButtonNormal.svg" id="1_exd8u"]
+[ext_resource type="FontFile" uid="uid://d3yjd7s2huxsb" path="res://Fonts/SchibstedGrotesk-SemiBold.ttf" id="1_ge73e"]
+[ext_resource type="Texture2D" uid="uid://dmnrd74gx1acx" path="res://SVGs/MenuButtonPressed.svg" id="3_nhw20"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0pit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fapl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mbn6u"]
+content_margin_top = 5.0
+texture = ExtResource("1_exd8u")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eiqog"]
+content_margin_top = 5.0
+texture = ExtResource("1_exd8u")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwpe0"]
+content_margin_top = 18.0
+texture = ExtResource("3_nhw20")
+texture_margin_left = 24.0
+texture_margin_top = 31.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[resource]
+Button/font_sizes/font_size = 28
+Button/fonts/font = ExtResource("1_ge73e")
+Button/styles/disabled = SubResource("StyleBoxEmpty_m0pit")
+Button/styles/focus = SubResource("StyleBoxEmpty_0fapl")
+Button/styles/hover = SubResource("StyleBoxTexture_mbn6u")
+Button/styles/normal = SubResource("StyleBoxTexture_eiqog")
+Button/styles/pressed = SubResource("StyleBoxTexture_fwpe0")
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_ge73e")

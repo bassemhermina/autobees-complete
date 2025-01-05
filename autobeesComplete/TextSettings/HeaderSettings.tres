@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c4bend8ts087h"]
+
+[ext_resource type="FontFile" uid="uid://buirw52pq184e" path="res://Fonts/SchibstedGrotesk-Bold.ttf" id="1_xkqj8"]
+
+[resource]
+line_spacing = -18.0
+font = ExtResource("1_xkqj8")
+font_size = 48
+font_color = Color(0, 0, 0, 1)

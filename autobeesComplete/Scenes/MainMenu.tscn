@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmdiirbl74khg"]
+
+[ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_2cwbl"]
+[ext_resource type="Texture2D" uid="uid://djhd1icjwjc6k" path="res://storyboards/MainMenu.png" id="1_ylkqe"]
+[ext_resource type="LabelSettings" uid="uid://c4bend8ts087h" path="res://TextSettings/HeaderSettings.tres" id="2_nawxh"]
+[ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="3_tm3vd"]
+[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="5_u78gv"]
+[ext_resource type="AudioStream" uid="uid://dmtk7kiqivgjs" path="res://Audio/Button2.wav" id="6_jh1sy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xdgm"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2cwbl")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 440.0
+offset_bottom = 956.0
+color = Color(0.992157, 0.854902, 0.160784, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+light_mask = 3
+visibility_layer = 3
+layout_mode = 0
+offset_right = 440.0
+offset_bottom = 956.0
+texture = ExtResource("1_ylkqe")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MainMenuHeader" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 228.0
+offset_right = 346.0
+offset_bottom = 408.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1xdgm")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMenuHeader"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 20
+
+[node name="HeaderText" type="Label" parent="MainMenuHeader/MarginContainer"]
+layout_mode = 2
+text = "أتوبيـــس
+كومبليت"
+label_settings = ExtResource("2_nawxh")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 2
+language = "ar"
+
+[node name="CreateButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 552.0
+offset_right = 346.0
+offset_bottom = 624.0
+text = "إبتدي جيم"
+text_direction = 2
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 648.0
+offset_right = 346.0
+offset_bottom = 720.0
+text = "خش جيم"
+text_direction = 2
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tm3vd")
+volume_db = -15.0
+autoplay = true
+
+[node name="HitButton1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_u78gv")
+
+[node name="HitButton2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jh1sy")
+
+[connection signal="pressed" from="CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
