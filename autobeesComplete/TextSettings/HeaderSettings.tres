@@ -1,8 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c4bend8ts087h"]
 
-[ext_resource type="FontFile" uid="uid://buirw52pq184e" path="res://Fonts/SchibstedGrotesk-Bold.ttf" id="1_xkqj8"]
+[ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="1_ey6gu"]
 
 [resource]
-line_spacing = -18.0
-font = ExtResource("1_xkqj8")
+line_spacing = -64.0
+font = ExtResource("1_ey6gu")
 font_size = 60
+font_color = Color(0, 0, 0, 1)
