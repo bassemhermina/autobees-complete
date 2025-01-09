@@ -1,9 +1,8 @@
-[gd_resource type="Theme" load_steps=17 format=3 uid="uid://cqypejnly3mbi"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://cqypejnly3mbi"]
 
 [ext_resource type="FontFile" uid="uid://mwqq6ga3mcc3" path="res://Fonts/NotoSansArabic/NotoSansArabic-SemiBold.ttf" id="1_6quho"]
 [ext_resource type="Texture2D" uid="uid://bfathcn2pvack" path="res://SVGs/MenuButtonNormal.svg" id="1_exd8u"]
 [ext_resource type="Texture2D" uid="uid://dmnrd74gx1acx" path="res://SVGs/MenuButtonPressed.svg" id="3_nhw20"]
-[ext_resource type="FontFile" uid="uid://d3yjd7s2huxsb" path="res://Fonts/SchibstedGrotesk/SchibstedGrotesk-SemiBold.ttf" id="4_qgac1"]
 [ext_resource type="FontFile" uid="uid://les13wexncho" path="res://Fonts/NotoSansArabic/NotoSansArabic-Regular.ttf" id="5_qjdl8"]
 [ext_resource type="StyleBox" uid="uid://3t23usq00w41" path="res://Styles/Text_Field_Focused.tres" id="6_bgy70"]
 [ext_resource type="StyleBox" uid="uid://dmcedtd4wnjgj" path="res://Styles/Text_Field_Normal.tres" id="6_x0nky"]
@@ -60,7 +59,6 @@ Button/styles/hover = SubResource("StyleBoxTexture_m4mh5")
 Button/styles/normal = SubResource("StyleBoxTexture_eiqog")
 Button/styles/pressed = SubResource("StyleBoxTexture_fwpe0")
 Label/font_sizes/font_size = 24
-Label/fonts/font = ExtResource("4_qgac1")
 Label/styles/normal = SubResource("StyleBoxTexture_ww7sb")
 LineEdit/colors/caret_color = Color(0, 0, 0, 0)
 LineEdit/colors/selection_color = Color(0.762404, 0.762404, 0.762404, 1)

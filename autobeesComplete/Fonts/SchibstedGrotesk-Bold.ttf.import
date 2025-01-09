@@ -2,10 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bhaa06kgva4yi"
+uid="uid://iur7s3o6nlh6"
+path="res://.godot/imported/SchibstedGrotesk-Bold.ttf-7b04652277d7459283b22219ef7c8e9c.fontdata"
 
 [deps]
 
+source_file="res://Fonts/SchibstedGrotesk-Bold.ttf"
+dest_files=["res://.godot/imported/SchibstedGrotesk-Bold.ttf-7b04652277d7459283b22219ef7c8e9c.fontdata"]
 
 [params]
 
