@@ -1,9 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvdtj61blpwcm"]
+[gd_scene load_steps=14 format=3 uid="uid://bncfaby26al8y"]
 
-[ext_resource type="Script" path="res://Scripts/GameRound.gd" id="1_wbq8t"]
+[ext_resource type="Script" path="res://Scripts/view/GameRound.gd" id="1_wbq8t"]
 [ext_resource type="Texture2D" uid="uid://bo0iq4xjnfcnx" path="res://storyboards/GameRound.png" id="2_r88tq"]
-[ext_resource type="FontFile" uid="uid://iur7s3o6nlh6" path="res://Fonts/SchibstedGrotesk-Bold.ttf" id="4_sp8m3"]
 [ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="3_u22v7"]
+[ext_resource type="FontFile" uid="uid://iur7s3o6nlh6" path="res://Fonts/SchibstedGrotesk-Bold.ttf" id="4_sp8m3"]
 [ext_resource type="AudioStream" uid="uid://dla5tjpsjkw2j" path="res://Audio/Midlander.wav" id="5_o7k1m"]
 [ext_resource type="AudioStream" uid="uid://8kn7lwwkmqc0" path="res://Audio/autobees-complete-audio.wav" id="6_4a1at"]
 [ext_resource type="FontFile" uid="uid://mwqq6ga3mcc3" path="res://Fonts/NotoSansArabic/NotoSansArabic-SemiBold.ttf" id="8_5pbp8"]

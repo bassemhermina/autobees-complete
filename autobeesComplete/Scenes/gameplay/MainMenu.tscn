@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmdiirbl74khg"]
 
-[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_2cwbl"]
-[ext_resource type="Texture2D" uid="uid://bhy41e5xhx6dx" path="res://storyboards/MainMenu2.png" id="2_aw3dw"]
-[ext_resource type="LabelSettings" uid="uid://c4bend8ts087h" path="res://TextSettings/HeaderSettings.tres" id="2_nawxh"]
-[ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="3_tm3vd"]
-[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="5_u78gv"]
-[ext_resource type="AudioStream" uid="uid://dmtk7kiqivgjs" path="res://Audio/Button2.wav" id="6_jh1sy"]
+[ext_resource type="Script" path="res://Scripts/view/MainMenu.gd" id="1_vltaf"]
+[ext_resource type="Texture2D" uid="uid://bhy41e5xhx6dx" path="res://storyboards/MainMenu2.png" id="2_yik4x"]
+[ext_resource type="LabelSettings" uid="uid://c4bend8ts087h" path="res://TextSettings/HeaderSettings.tres" id="3_oyj13"]
+[ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="4_ty4k6"]
+[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="5_cd2c3"]
+[ext_resource type="AudioStream" uid="uid://dmtk7kiqivgjs" path="res://Audio/Button2.wav" id="6_82kbt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xdgm"]
 bg_color = Color(1, 1, 1, 1)
@@ -24,7 +24,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_2cwbl")
+script = ExtResource("1_vltaf")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
@@ -39,7 +39,7 @@ visibility_layer = 3
 layout_mode = 0
 offset_right = 440.0
 offset_bottom = 956.0
-texture = ExtResource("2_aw3dw")
+texture = ExtResource("2_yik4x")
 expand_mode = 1
 stretch_mode = 4
 
@@ -59,7 +59,7 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 text = "أتوبيــس
 كومبليت"
-label_settings = ExtResource("2_nawxh")
+label_settings = ExtResource("3_oyj13")
 horizontal_alignment = 1
 vertical_alignment = 1
 text_direction = 2
@@ -84,15 +84,14 @@ text = "خش جيم"
 text_direction = 2
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_tm3vd")
+stream = ExtResource("4_ty4k6")
 volume_db = -10.0
-autoplay = true
 
 [node name="HitButton1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_u78gv")
+stream = ExtResource("5_cd2c3")
 
 [node name="HitButton2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_jh1sy")
+stream = ExtResource("6_82kbt")
 
 [connection signal="pressed" from="CreateButton" to="." method="_on_create_button_pressed"]
 [connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]

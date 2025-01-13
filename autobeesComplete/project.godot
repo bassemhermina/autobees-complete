@@ -11,14 +11,24 @@ config_version=5
 [application]
 
 config/name="AutobeesComplete"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/gameplay/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+
+[autoload]
+
+Firebase="*res://addons/godot-firebase/firebase/firebase.tscn"
+Game="*res://Scenes/model/Game.tscn"
 
 [display]
 
 window/size/viewport_width=440
 window/size/viewport_height=956
 window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg", "res://addons/http-sse-client/plugin.cfg")
 
 [gui]
 
@@ -27,3 +37,4 @@ theme/custom="res://Themes/AutobeesComplete.tres"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

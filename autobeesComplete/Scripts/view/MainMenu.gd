@@ -13,11 +13,15 @@ func _process(delta: float) -> void:
 
 func _on_create_button_pressed() -> void:
 	$HitButton1.play()
-	pass # Replace with function body.
 
+	FirebaseWrapper.pushPlayer(Game.currentPlayer)
+	var newLobby = Lobby.new()
+	FirebaseWrapper.pushLobby(newLobby)
 
 func _on_join_button_pressed():
 	$HitButton2.play()
-	get_tree().change_scene_to_file("res://Scenes/GameRound.tscn")
+	
+	var lobbies = FirebaseWrapper.getAvailableLobbies()
+	#get_tree().change_scene_to_file("res://Scenes/gameplay/GameRound.tscn")
 	
 	
