@@ -24,3 +24,9 @@ mono_crash.*.json
 
 # Jetbrains IDE files
 .idea/
+
+# Build folder
+build/
+
+# Firebase env files
+*.env
