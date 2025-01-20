@@ -13,6 +13,7 @@ config_version=5
 config/name="AutobeesComplete"
 run/main_scene="res://Scenes/gameplay/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://AC_icon.png"
 
 [autoload]
 

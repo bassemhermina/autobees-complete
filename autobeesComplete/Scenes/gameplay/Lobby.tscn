@@ -1,0 +1,301 @@
+[gd_scene load_steps=16 format=3 uid="uid://i0omis582jjj"]
+
+[ext_resource type="Script" path="res://Scripts/view/lobby.gd" id="1_2tlfs"]
+[ext_resource type="Texture2D" uid="uid://ckxyodkb7fcyg" path="res://storyboards/Lobby.png" id="2_7y8y1"]
+[ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="3_e46nt"]
+[ext_resource type="Texture2D" uid="uid://dmxc5r3aajudf" path="res://SVGs/Code.svg" id="4_tucwj"]
+[ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="5_ffrdc"]
+[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="6_fbfph"]
+[ext_resource type="FontFile" uid="uid://bqmrc01onlsl5" path="res://Fonts/NotoSansArabic/NotoSansArabic-Medium.ttf" id="7_lbe43"]
+[ext_resource type="Texture2D" uid="uid://bxnopsb451mtp" path="res://SVGs/AR.svg" id="8_ounc2"]
+[ext_resource type="Texture2D" uid="uid://c6njjffova6x2" path="res://SVGs/EN.svg" id="9_jyjna"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hx44"]
+font = ExtResource("3_e46nt")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6vmxl"]
+texture = ExtResource("4_tucwj")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r18la"]
+bg_color = Color(0.458824, 0, 0.956863, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ac4b"]
+font = ExtResource("7_lbe43")
+font_size = 36
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4qpum"]
+texture = ExtResource("8_ounc2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rdhx"]
+texture = ExtResource("9_jyjna")
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 440.0
+offset_bottom = 956.0
+script = ExtResource("1_2tlfs")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 440.0
+offset_bottom = 956.0
+color = Color(0.992157, 0.854902, 0.160784, 1)
+
+[node name="ref" type="TextureRect" parent="."]
+visible = false
+light_mask = 3
+visibility_layer = 3
+layout_mode = 0
+offset_right = 440.0
+offset_bottom = 956.0
+texture = ExtResource("2_7y8y1")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Code" type="Label" parent="."]
+layout_direction = 3
+layout_mode = 2
+offset_left = 24.0
+offset_top = 71.0
+offset_right = 320.0
+offset_bottom = 199.0
+size_flags_horizontal = 4
+text = "628 393"
+label_settings = SubResource("LabelSettings_1hx44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CodeContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 84.0
+offset_right = 416.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6vmxl")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 792.0
+offset_right = 416.0
+offset_bottom = 899.0
+theme_override_fonts/font = ExtResource("3_e46nt")
+theme_override_font_sizes/font_size = 36
+text = "إبتدي الجيم"
+text_direction = 2
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ffrdc")
+volume_db = -5.0
+autoplay = true
+
+[node name="HitButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fbfph")
+
+[node name="Rows" type="GridContainer" parent="."]
+layout_direction = 3
+layout_mode = 0
+offset_left = 24.0
+offset_top = 216.0
+offset_right = 416.0
+offset_bottom = 756.0
+theme_override_constants/v_separation = 24
+
+[node name="Row1" type="GridContainer" parent="Rows"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="Player1" type="PanelContainer" parent="Rows/Row1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row1/Player1"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row1/Player1/MarginContainer"]
+layout_mode = 2
+text = "مصطفى"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+
+[node name="Player2" type="PanelContainer" parent="Rows/Row1"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row1/Player2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row1/Player2/MarginContainer"]
+layout_mode = 2
+text = "zorbex"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row2" type="GridContainer" parent="Rows"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="Player1" type="PanelContainer" parent="Rows/Row2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row2/Player1"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row2/Player1/MarginContainer"]
+layout_mode = 2
+text = "matthew"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+
+[node name="Player2" type="PanelContainer" parent="Rows/Row2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row2/Player2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row2/Player2/MarginContainer"]
+layout_mode = 2
+text = "هناء"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row3" type="GridContainer" parent="Rows"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="Player1" type="PanelContainer" parent="Rows/Row3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row3/Player1"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row3/Player1/MarginContainer"]
+layout_mode = 2
+text = "مينا القمح"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+
+[node name="Player2" type="PanelContainer" parent="Rows/Row3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row3/Player2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row3/Player2/MarginContainer"]
+layout_mode = 2
+text = "znglov"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row4" type="GridContainer" parent="Rows"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="Player1" type="PanelContainer" parent="Rows/Row4"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row4/Player1"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row4/Player1/MarginContainer"]
+layout_mode = 2
+text = "بيلاتشاو"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+
+[node name="Player2" type="PanelContainer" parent="Rows/Row4"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row4/Player2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row4/Player2/MarginContainer"]
+layout_mode = 2
+text = "كومبانتي"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AR" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 84.0
+offset_right = 96.0
+offset_bottom = 180.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_4qpum")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4qpum")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4qpum")
+
+[node name="EN" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 84.0
+offset_right = 96.0
+offset_bottom = 180.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_3rdhx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3rdhx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3rdhx")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="AR" to="." method="_on_ar_pressed"]
+[connection signal="pressed" from="EN" to="." method="_on_en_pressed"]
