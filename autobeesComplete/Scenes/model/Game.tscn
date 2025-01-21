@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://doa2iq85kqnsi"]
+[gd_scene load_steps=5 format=3 uid="uid://doa2iq85kqnsi"]
 
 [ext_resource type="Script" path="res://Scripts/model/Game.gd" id="1_l0set"]
 [ext_resource type="Script" path="res://Scripts/firebase_test.gd" id="2_qgc8f"]
+[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="3_e4i7d"]
+[ext_resource type="AudioStream" uid="uid://dmtk7kiqivgjs" path="res://Audio/Button2.wav" id="4_exsfd"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_l0set")
 
 [node name="firebase_test" type="Node" parent="."]
 script = ExtResource("2_qgc8f")
+
+[node name="HitButton1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e4i7d")
+
+[node name="HitButton2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_exsfd")

@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmdiirbl74khg"]
+[gd_scene load_steps=6 format=3 uid="uid://dmdiirbl74khg"]
 
 [ext_resource type="Script" path="res://Scripts/view/MainMenu.gd" id="1_vltaf"]
 [ext_resource type="Texture2D" uid="uid://bhy41e5xhx6dx" path="res://storyboards/MainMenu2.png" id="2_yik4x"]
 [ext_resource type="LabelSettings" uid="uid://c4bend8ts087h" path="res://TextSettings/HeaderSettings.tres" id="3_oyj13"]
 [ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="4_ty4k6"]
-[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="5_cd2c3"]
-[ext_resource type="AudioStream" uid="uid://dmtk7kiqivgjs" path="res://Audio/Button2.wav" id="6_82kbt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xdgm"]
 bg_color = Color(1, 1, 1, 1)
@@ -86,12 +84,6 @@ text_direction = 2
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ty4k6")
 volume_db = -10.0
-
-[node name="HitButton1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_cd2c3")
-
-[node name="HitButton2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_82kbt")
 
 [connection signal="pressed" from="CreateButton" to="." method="_on_create_button_pressed"]
 [connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
