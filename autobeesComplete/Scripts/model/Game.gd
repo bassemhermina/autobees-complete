@@ -1,8 +1,6 @@
 extends Node2D
 
-# This is a game model class.
-# it keeps track of the current game state, regarding players,
-# lobby, their scores, ..etc. As a replica of the database.
+var lobbyScene: PackedScene
 
 var firebaseWrapper: FirebaseWrapper
 
@@ -14,10 +12,15 @@ var currentLobby: Lobby
 # currentPlayer
 # currentLobby
 
-# when initialized, creates the (me) player, logs (me)
-#  into firebase, keeps (me) alive.
-
 func _ready():
-	print("Game model global instance constructed")
+	# initialize the firebase connection
 	FirebaseWrapper.initialize()
-	self.currentPlayer = Player.new("bassem")
+	
+	# create the current player model
+	self.currentPlayer = Player.new("باسم")
+	
+	# keeps current player alive on the database state.
+	# TODO
+	
+	# preload required scenes
+	lobbyScene = preload("res://Scenes/gameplay/Lobby.tscn")

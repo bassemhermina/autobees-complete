@@ -98,7 +98,6 @@ text_direction = 2
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ffrdc")
 volume_db = -5.0
-autoplay = true
 
 [node name="HitButton" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_fbfph")
@@ -131,11 +130,12 @@ theme_override_constants/margin_bottom = 4
 
 [node name="Label2" type="Label" parent="Rows/Row1/Player1/MarginContainer"]
 layout_mode = 2
-text = "مصطفى"
+text = "فاضي"
 label_settings = SubResource("LabelSettings_6ac4b")
 horizontal_alignment = 1
 
 [node name="Player2" type="PanelContainer" parent="Rows/Row1"]
+visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
 
@@ -154,6 +154,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row2" type="GridContainer" parent="Rows"]
+visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
@@ -195,6 +196,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row3" type="GridContainer" parent="Rows"]
+visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
@@ -236,6 +238,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row4" type="GridContainer" parent="Rows"]
+visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
