@@ -38,8 +38,4 @@ func _on_create_button_pressed() -> void:
 
 func _on_join_button_pressed():
 	Game.get_node("HitButton2").play()
-	
-	var lobbies = FirebaseWrapper.getAvailableLobbies()
-	#get_tree().change_scene_to_file("res://Scenes/gameplay/GameRound.tscn")
-	
-	
+	get_tree().change_scene_to_file("res://Scenes/gameplay/JoinWithId.tscn")	

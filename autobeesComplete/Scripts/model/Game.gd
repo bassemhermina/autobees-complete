@@ -6,11 +6,7 @@ var firebaseWrapper: FirebaseWrapper
 
 var currentPlayer: Player
 var currentLobby: Lobby
-
-# players[]
-# lobbies[]
-# currentPlayer
-# currentLobby
+# otherPlayers[]
 
 func _ready():
 	# initialize the firebase connection
