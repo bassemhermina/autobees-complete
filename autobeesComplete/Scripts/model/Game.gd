@@ -1,16 +1,12 @@
 extends Node2D
 
-var lobbyScene: PackedScene
-
-var firebaseWrapper: FirebaseWrapper
-
 var currentPlayer: Player
 var currentLobby: Lobby
-# otherPlayers[]
 
 func _ready():
 	# initialize the firebase connection
 	FirebaseWrapper.initialize()
+	SceneSwitcher.initialize()
 	
 	# create the current player model
 	self.currentPlayer = Player.new("باسم")
@@ -18,5 +14,3 @@ func _ready():
 	# keeps current player alive on the database state.
 	# TODO
 	
-	# preload required scenes
-	lobbyScene = preload("res://Scenes/gameplay/Lobby.tscn")

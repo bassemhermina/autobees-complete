@@ -121,7 +121,6 @@ text_direction = 2
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_o7k1m")
 volume_db = -5.0
-autoplay = true
 
 [node name="HitButton" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4a1at")

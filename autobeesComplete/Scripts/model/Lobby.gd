@@ -1,7 +1,7 @@
 class_name Lobby extends Node
 
 var lobbyId: String
-var playersIds: Array[String] = ['sadsd']
+var playersIds = []
 var language: String
 # var scorePerPlayer: int[]
 # var rounds: Round[]
@@ -23,7 +23,7 @@ func from_dict(id, dict) -> Lobby:
 	self.language = dict["language"]
 	self.ableToJoin = dict["ableToJoin"]
 	self.createdAt = dict["createdAt"]
-	self.playersIds = dict["playersIds"] || []
+	self.playersIds = dict.get("playersIds", [])
 	return self
 
 func to_dict():

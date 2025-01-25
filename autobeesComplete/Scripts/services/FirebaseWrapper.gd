@@ -25,12 +25,11 @@ static func pushPlayer(player: Player) -> void:
 static func pushLobby(lobby: Lobby) -> void:
 	lobbies_ref.update('/', lobby.to_dict())
 	
-static func getAvailableLobbies() -> Array[Lobby]:
+static func pullLobbies() -> Array[Lobby]:
 	var lobbies_arr: Array[Lobby] = []
 	var lobbies_dict = lobbies_ref.get_data()
 	for lobbyId in lobbies_dict.keys():
 		var lobbyData = lobbies_dict[lobbyId]
 		var lobby = Lobby.new().from_dict(lobbyId, lobbyData)
 		lobbies_arr.push_back(lobby)
-		print(lobby.to_dict())
 	return lobbies_arr
