@@ -1,33 +1,22 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-	# Initialize the visibility of the buttons
-	$AR.show()
-	$EN.hide()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_start_button_pressed() -> void:
-	$HitButton.play()
-	pass # Replace with function body.
-
+	Game.playButtonSound()
 
 func _on_ar_pressed() -> void:
 	$HitButton.play()
 	$AR.hide()
 	$EN.show()
-	pass # Replace with function body.
-
 
 func _on_en_pressed() -> void:
 	$HitButton.play()
 	$EN.hide()
 	$AR.show()
-	pass # Replace with function body.
+
+func renderLobbyObj(lobbyObj: Lobby):
+	var currentPlayerName = Game.currentPlayer.playerName
+	var lobbyId = Game.currentLobby.lobbyId
+	var nameLabel = get_node("Rows/Row1/Player1/MarginContainer/Label2")
+	nameLabel.text = currentPlayerName
+	var codeLabel = get_node("Code")
+	codeLabel.text = Numbers.split_id_with_space(lobbyId)

@@ -13,4 +13,4 @@ func _on_join_with_id_pressed() -> void:
 		return
 		
 	Game.currentLobby = requestedLobby
-	SceneSwitcher.showLobby(self)
+	SceneSwitcher.switchToLobby(self)

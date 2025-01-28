@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://i0omis582jjj"]
+[gd_scene load_steps=15 format=3 uid="uid://i0omis582jjj"]
 
 [ext_resource type="Script" path="res://Scripts/view/lobby.gd" id="1_2tlfs"]
 [ext_resource type="Texture2D" uid="uid://ckxyodkb7fcyg" path="res://storyboards/Lobby.png" id="2_7y8y1"]
 [ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="3_e46nt"]
 [ext_resource type="Texture2D" uid="uid://dmxc5r3aajudf" path="res://SVGs/Code.svg" id="4_tucwj"]
 [ext_resource type="AudioStream" uid="uid://vue1dh44yi00" path="res://Audio/MindThatGap.wav" id="5_ffrdc"]
-[ext_resource type="AudioStream" uid="uid://dm80nclnqlwbo" path="res://Audio/Button1.wav" id="6_fbfph"]
 [ext_resource type="FontFile" uid="uid://bqmrc01onlsl5" path="res://Fonts/NotoSansArabic/NotoSansArabic-Medium.ttf" id="7_lbe43"]
 [ext_resource type="Texture2D" uid="uid://bxnopsb451mtp" path="res://SVGs/AR.svg" id="8_ounc2"]
 [ext_resource type="Texture2D" uid="uid://c6njjffova6x2" path="res://SVGs/EN.svg" id="9_jyjna"]
@@ -98,9 +97,6 @@ text_direction = 2
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ffrdc")
 volume_db = -5.0
-
-[node name="HitButton" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_fbfph")
 
 [node name="Rows" type="GridContainer" parent="."]
 layout_direction = 3
@@ -290,6 +286,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_4qpum")
 theme_override_styles/normal = SubResource("StyleBoxTexture_4qpum")
 
 [node name="EN" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 84.0

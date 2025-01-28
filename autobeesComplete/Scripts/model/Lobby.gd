@@ -12,6 +12,7 @@ var createdAt: int
 
 func _init() -> void:
 	self.lobbyId = Numbers.generate_random_id()
+	self.playersIds.append(Game.currentPlayer.playerId)
 	self.leaderId = Game.currentPlayer.playerId
 	self.language = "Arabic"
 	self.ableToJoin = true
