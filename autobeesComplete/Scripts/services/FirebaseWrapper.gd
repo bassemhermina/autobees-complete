@@ -8,6 +8,8 @@ static var database_connection_initialized = false
 static var players_ref: FirebaseDatabaseReference
 static var lobbies_ref: FirebaseDatabaseReference
 
+static var curr_lobby_ref: FirebaseDatabaseReference
+
 # Provides an API to ease the transfers across the database, allowing
 # full reflection into the game model through the API.
 
@@ -36,11 +38,15 @@ static func pullLobbies() -> Array[Lobby]:
 		var lobby = Lobby.new().from_dict(lobbyId, lobbyData)
 		lobbies_arr.push_back(lobby)
 	return lobbies_arr
-	
 
-# add methods here to watch changes for a path, with a callback to be called.
-# who should be assigning himself for callbacks? 
-# lobby view: since this creates the model already, then it watches the network updates.
-# and updates the model accordingly for later usages.
-# then the model is not a model, it's just class wrappers for the transferred data.
-# gamed
+static func watchLobbyUpdates(lobby: Lobby, callback: Callable):
+	print("trying to watch data updates ..")
+	curr_lobby_ref = Firebase.Database.get_database_reference("/lobbies/" + lobby.lobbyId)
+	curr_lobby_ref.new_data_update.connect(_data_updated)
+
+static func _data_updated(resources):
+	print("data updated! -> ", resources)
+	var lobby = curr_lobby_ref.get_data()
+	print(lobby)
+	# Here it should watch for the initial callbacks for 
+	# each child on initializing the reference, and ignore those.
