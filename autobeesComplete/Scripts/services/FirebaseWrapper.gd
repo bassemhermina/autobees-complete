@@ -33,3 +33,10 @@ static func pullLobbies() -> Array[Lobby]:
 		var lobby = Lobby.new().from_dict(lobbyId, lobbyData)
 		lobbies_arr.push_back(lobby)
 	return lobbies_arr
+
+# add methods here to watch changes for a path, with a callback to be called.
+# who should be assigning himself for callbacks? 
+# lobby view: since this creates the model already, then it watches the network updates.
+# and updates the model accordingly for later usages.
+# then the model is not a model, it's just class wrappers for the transferred data.
+# gamed
