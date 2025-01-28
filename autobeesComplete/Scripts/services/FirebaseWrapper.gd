@@ -3,6 +3,8 @@ class_name FirebaseWrapper extends Node
 # Inistantiates and initializes the firebase instance, authenticates 
 # the user, and ready for interactions.
 
+static var database_connection_initialized = false
+
 static var players_ref: FirebaseDatabaseReference
 static var lobbies_ref: FirebaseDatabaseReference
 
@@ -18,6 +20,7 @@ static func _on_signup_success(auth_info: Dictionary):
 	print("Successfully logged in as an anonymous user!")
 	players_ref = Firebase.Database.get_database_reference("/players")
 	lobbies_ref = Firebase.Database.get_database_reference("/lobbies")
+	database_connection_initialized = true
 
 static func pushPlayer(player: Player) -> void:
 	players_ref.update('/', player.to_dict())
@@ -33,6 +36,7 @@ static func pullLobbies() -> Array[Lobby]:
 		var lobby = Lobby.new().from_dict(lobbyId, lobbyData)
 		lobbies_arr.push_back(lobby)
 	return lobbies_arr
+	
 
 # add methods here to watch changes for a path, with a callback to be called.
 # who should be assigning himself for callbacks? 
