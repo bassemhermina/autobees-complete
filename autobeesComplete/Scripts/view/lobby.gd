@@ -14,8 +14,10 @@ func _on_en_pressed() -> void:
 	$AR.show()
 
 func renderLobbyObj(lobby: Lobby):
-	var currentPlayerName = Game.currentPlayer.playerName
-	var lobbyId = Game.currentLobby.lobbyId
+	var currentPlayerId = Game.currentPlayer.playerId
+	var currentPlayer = lobby.players.get(currentPlayerId)
+	var currentPlayerName = currentPlayer.playerName
+	var lobbyId = lobby.lobbyId
 	var nameLabel = get_node("Rows/Row1/Player1/MarginContainer/Label2")
 	nameLabel.text = currentPlayerName
 	var codeLabel = get_node("Code")
