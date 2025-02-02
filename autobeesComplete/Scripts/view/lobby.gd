@@ -20,10 +20,10 @@ func renderLobbyObj(lobby: Lobby):
 	nameLabel.text = currentPlayerName
 	var codeLabel = get_node("Code")
 	codeLabel.text = Numbers.split_id_with_space(lobbyId)
+
+func watchLobbyUpdates(lobby: Lobby):
 	FirebaseWrapper.watchLobbyUpdates(lobby, _on_lobby_updated)
 
-func _on_lobby_updated(lobby: Lobby):
-	print("lobby was updated!", lobby.lobbyId)
-	# here, it should be responsible for comparing what it
-	# gets from the database, and updating the rendered scene
-	# accordingly, like react.
+func _on_lobby_updated(lobby: Lobby, updates: Object):
+	print("lobby was updated!", lobby.lobbyId, lobby, updates)
+	renderLobbyObj(lobby)

@@ -9,5 +9,6 @@ static func initialize() -> void:
 static func switchToLobby(caller: Node) -> void:
 	var lobbySceneInstance = SceneSwitcher.lobbyScene.instantiate()
 	lobbySceneInstance.renderLobbyObj(Game.currentLobby)
+	lobbySceneInstance.watchLobbyUpdates(Game.currentLobby)
 	caller.get_tree().root.add_child(lobbySceneInstance)
 	caller.queue_free()

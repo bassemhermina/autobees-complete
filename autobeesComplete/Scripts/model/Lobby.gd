@@ -1,7 +1,7 @@
 class_name Lobby extends Node
 
 var lobbyId: String
-var playersIds = []
+var players: Dictionary = {}
 var language: String
 # var scorePerPlayer: int[]
 # var rounds: Round[]
@@ -12,7 +12,7 @@ var createdAt: int
 
 func _init() -> void:
 	self.lobbyId = Numbers.generate_random_id()
-	self.playersIds.append(Game.currentPlayer.playerId)
+	self.players[Game.currentPlayer.playerId] = Game.currentPlayer
 	self.leaderId = Game.currentPlayer.playerId
 	self.language = "Arabic"
 	self.ableToJoin = true
@@ -24,14 +24,14 @@ func from_dict(id, dict) -> Lobby:
 	self.language = dict["language"]
 	self.ableToJoin = dict["ableToJoin"]
 	self.createdAt = dict["createdAt"]
-	self.playersIds = dict.get("playersIds", [])
+	self.players = Player.map_from_dict(dict.get("players", []))
 	return self
 
 func to_dict():
 	return {
 		self.lobbyId: {
 			"leaderId": self.leaderId,
-			"playersIds": self.playersIds,
+			"players": Player.map_to_dict(self.players),
 			"language": self.language,
 			"ableToJoin": self.ableToJoin,
 			"createdAt": self.createdAt
