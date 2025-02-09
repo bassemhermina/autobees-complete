@@ -7,8 +7,6 @@ func _ready():
 	# initialize the firebase connection
 	FirebaseWrapper.initialize()
 	
-	self.currentPlayer = Player.new("باسم")
-	
 	# keeps current player alive on the database state.
 	# TODO
 	
