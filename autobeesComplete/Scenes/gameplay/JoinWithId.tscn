@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3omcitjqu4yq"]
+[gd_scene load_steps=5 format=3 uid="uid://c3omcitjqu4yq"]
 
 [ext_resource type="Script" path="res://Scripts/view/JoinWithId.gd" id="1_ddp61"]
 [ext_resource type="Texture2D" uid="uid://cpfcm4xq2vo0r" path="res://SVGs/pencil.svg" id="1_iqrhl"]
 [ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="2_nsqwy"]
+[ext_resource type="Texture2D" uid="uid://dkl0auisgse1a" path="res://storyboards/EnterLobbyID.png" id="2_wnnlm"]
 
 [node name="JoinWithId" type="Node2D"]
 script = ExtResource("1_ddp61")
@@ -12,27 +13,37 @@ offset_right = 440.0
 offset_bottom = 956.0
 color = Color(0.992157, 0.854902, 0.160784, 1)
 
+[node name="ref" type="TextureRect" parent="."]
+visible = false
+light_mask = 3
+visibility_layer = 3
+offset_right = 440.0
+offset_bottom = 956.0
+texture = ExtResource("2_wnnlm")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="LineEdit_object" type="LineEdit" parent="."]
 layout_direction = 3
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -311.0
-offset_top = 309.0
-offset_right = -106.0
-offset_bottom = 394.0
+offset_left = -366.0
+offset_top = 364.0
+offset_right = -44.0
+offset_bottom = 449.0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-alignment = 1
+placeholder_text = "  كود الجيم"
 max_length = 8
 clear_button_enabled = true
 right_icon = ExtResource("1_iqrhl")
 
 [node name="SubmitButton" type="Button" parent="."]
-offset_left = 75.0
-offset_top = 417.0
-offset_right = 369.0
-offset_bottom = 524.0
+offset_left = 44.0
+offset_top = 483.0
+offset_right = 396.0
+offset_bottom = 591.0
 theme_override_fonts/font = ExtResource("2_nsqwy")
 theme_override_font_sizes/font_size = 36
 text = "خش الجيم"

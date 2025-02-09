@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Reset_Timer()
+	$LetterBox/MarginContainer/Letter.text = Game.currentLobby.currentLetter
 	pass # Replace with function body.
 
 

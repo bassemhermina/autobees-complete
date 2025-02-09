@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://dmd70n514aa6f"]
+
+[ext_resource type="FontFile" uid="uid://15xpsmqccrci" path="res://Fonts/NotoSansArabic/NotoSansArabic-Bold.ttf" id="1_leco7"]
+[ext_resource type="StyleBox" uid="uid://dpokxxxddcby2" path="res://Styles/alphabet_button_normal.tres" id="2_23b8m"]
+[ext_resource type="Texture2D" uid="uid://dmnrd74gx1acx" path="res://SVGs/MenuButtonPressed.svg" id="3_kutqh"]
+[ext_resource type="FontFile" uid="uid://les13wexncho" path="res://Fonts/NotoSansArabic/NotoSansArabic-Regular.ttf" id="4_t73tk"]
+[ext_resource type="StyleBox" uid="uid://3t23usq00w41" path="res://Styles/Text_Field_Focused.tres" id="5_h71y0"]
+[ext_resource type="StyleBox" uid="uid://dmcedtd4wnjgj" path="res://Styles/Text_Field_Normal.tres" id="6_sdyne"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0pit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_27d2m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwpe0"]
+content_margin_top = 37.0
+texture = ExtResource("3_kutqh")
+texture_margin_left = 24.0
+texture_margin_top = 31.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ww7sb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_gik42"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0obqk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4sik"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_leco7")
+Button/styles/disabled = SubResource("StyleBoxEmpty_m0pit")
+Button/styles/focus = SubResource("StyleBoxEmpty_27d2m")
+Button/styles/hover = ExtResource("2_23b8m")
+Button/styles/normal = ExtResource("2_23b8m")
+Button/styles/pressed = SubResource("StyleBoxTexture_fwpe0")
+Label/font_sizes/font_size = 24
+Label/styles/normal = SubResource("StyleBoxTexture_ww7sb")
+LineEdit/colors/caret_color = Color(0, 0, 0, 0)
+LineEdit/colors/selection_color = Color(0.762404, 0.762404, 0.762404, 1)
+LineEdit/constants/minimum_character_width = 1
+LineEdit/font_sizes/font_size = 36
+LineEdit/fonts/font = ExtResource("4_t73tk")
+LineEdit/icons/clear = SubResource("PlaceholderTexture2D_gik42")
+LineEdit/styles/focus = ExtResource("5_h71y0")
+LineEdit/styles/normal = ExtResource("6_sdyne")
+LineEdit/styles/read_only = SubResource("StyleBoxEmpty_0obqk")
+TextEdit/styles/focus = SubResource("StyleBoxEmpty_b4sik")

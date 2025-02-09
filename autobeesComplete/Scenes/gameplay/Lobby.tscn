@@ -131,7 +131,6 @@ label_settings = SubResource("LabelSettings_6ac4b")
 horizontal_alignment = 1
 
 [node name="Player2" type="PanelContainer" parent="Rows/Row1"]
-visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
 
@@ -150,7 +149,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row2" type="GridContainer" parent="Rows"]
-visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
@@ -192,7 +190,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row3" type="GridContainer" parent="Rows"]
-visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
@@ -234,7 +231,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Row4" type="GridContainer" parent="Rows"]
-visible = false
 layout_direction = 3
 layout_mode = 2
 theme_override_constants/h_separation = 24
@@ -269,6 +265,47 @@ theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 4
 
 [node name="Label2" type="Label" parent="Rows/Row4/Player2/MarginContainer"]
+layout_mode = 2
+text = "كومبانتي"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row5" type="GridContainer" parent="Rows"]
+layout_direction = 3
+layout_mode = 2
+theme_override_constants/h_separation = 24
+columns = 2
+
+[node name="Player1" type="PanelContainer" parent="Rows/Row5"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row5/Player1"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row5/Player1/MarginContainer"]
+layout_mode = 2
+text = "بيلاتشاو"
+label_settings = SubResource("LabelSettings_6ac4b")
+horizontal_alignment = 1
+
+[node name="Player2" type="PanelContainer" parent="Rows/Row5"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r18la")
+
+[node name="MarginContainer" type="MarginContainer" parent="Rows/Row5/Player2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 4
+
+[node name="Label2" type="Label" parent="Rows/Row5/Player2/MarginContainer"]
 layout_mode = 2
 text = "كومبانتي"
 label_settings = SubResource("LabelSettings_6ac4b")

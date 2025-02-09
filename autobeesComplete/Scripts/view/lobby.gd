@@ -2,6 +2,7 @@ extends Control
 
 func _on_start_button_pressed() -> void:
 	Game.playButtonSound()
+	get_tree().change_scene_to_file("res://Scenes/gameplay/Alphabet.tscn")	
 
 func _on_ar_pressed() -> void:
 	$HitButton.play()

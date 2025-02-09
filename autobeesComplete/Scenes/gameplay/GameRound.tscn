@@ -20,7 +20,7 @@ corner_radius_bottom_left = 24
 [sub_resource type="LabelSettings" id="LabelSettings_j5u70"]
 line_spacing = 0.0
 font = ExtResource("3_u22v7")
-font_size = 60
+font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_v00v4"]
 line_spacing = -18.0
@@ -72,12 +72,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1xdgm")
 
 [node name="MarginContainer" type="MarginContainer" parent="LetterBox"]
 layout_mode = 2
-theme_override_constants/margin_top = -10
+theme_override_constants/margin_top = 0
 theme_override_constants/margin_bottom = 0
 
 [node name="Letter" type="Label" parent="LetterBox/MarginContainer"]
 layout_mode = 2
-text = "ب"
+text = "أ"
 label_settings = SubResource("LabelSettings_j5u70")
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://1mcyqej0vjh1"]
+
+[ext_resource type="Texture2D" uid="uid://dkl0auisgse1a" path="res://storyboards/EnterLobbyID.png" id="1_d5d3p"]
+[ext_resource type="Texture2D" uid="uid://cpfcm4xq2vo0r" path="res://SVGs/pencil.svg" id="2_ld274"]
+
+[node name="NewPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 440.0
+offset_bottom = 956.0
+color = Color(0.992157, 0.854902, 0.160784, 1)
+
+[node name="ref" type="TextureRect" parent="."]
+light_mask = 3
+visibility_layer = 3
+offset_right = 440.0
+offset_bottom = 956.0
+texture = ExtResource("1_d5d3p")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 365.0
+offset_right = 367.0
+offset_bottom = 449.0
+placeholder_text = "  أي اسم"
+alignment = 2
+right_icon = ExtResource("2_ld274")
+
+[node name="SubmitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 483.0
+offset_right = 396.0
+offset_bottom = 591.0
+text = "إبتدي اللعبة"

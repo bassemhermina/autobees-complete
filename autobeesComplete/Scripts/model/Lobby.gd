@@ -3,9 +3,10 @@ class_name Lobby extends Node
 var lobbyId: String
 var players: Dictionary = {}
 var language: String
+var currentLetter: String
 # var scorePerPlayer: int[]
 # var rounds: Round[]
-# var availableLetters: String[]
+var availableLetters: Array[String]
 var ableToJoin: bool
 var leaderId: String
 var createdAt: int
@@ -17,6 +18,7 @@ func _init() -> void:
 	self.language = "Arabic"
 	self.ableToJoin = true
 	self.createdAt = Time.get_unix_time_from_system()
+	self.availableLetters = ["أ", "ب", "ت", "ث"]
 	
 func from_dict(id, dict) -> Lobby:
 	self.lobbyId = id
