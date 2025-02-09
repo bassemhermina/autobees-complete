@@ -6,9 +6,8 @@ var currentLobby: Lobby
 func _ready():
 	# initialize the firebase connection
 	FirebaseWrapper.initialize()
-	SceneSwitcher.initialize()
 	
-	self.currentPlayer = Player.new(Numbers.generate_random_id())
+	self.currentPlayer = Player.new("باسم")
 	
 	# keeps current player alive on the database state.
 	# TODO
